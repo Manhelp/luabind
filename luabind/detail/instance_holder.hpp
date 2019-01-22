@@ -52,7 +52,7 @@ inline mpl::true_ check_const_pointer(void const*)
 template <class T>
 void release_ownership(std::shared_ptr<T>& p)
 {
-    p.release();
+    //p.release();
 }
 
 template <class P>

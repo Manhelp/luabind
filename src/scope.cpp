@@ -49,7 +49,7 @@ namespace luabind { namespace detail {
     }
     
     scope::scope(std::shared_ptr<detail::registration> reg)
-        : m_chain(reg)
+        : m_chain(reg.get())
     {
     }
 
