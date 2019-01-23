@@ -41,14 +41,14 @@ struct Unregistered : Base
     {}
 };
 
-std::shared_ptr<Base> make_derived()
+std::auto_ptr<Base> make_derived()
 {
-    return std::shared_ptr<Base>(new Derived);
+    return std::auto_ptr<Base>(new Derived);
 }
 
-std::shared_ptr<Base> make_unregistered()
+std::auto_ptr<Base> make_unregistered()
 {
-    return std::shared_ptr<Base>(new Unregistered);
+    return std::auto_ptr<Base>(new Unregistered);
 }
 
 void test_main(lua_State* L)

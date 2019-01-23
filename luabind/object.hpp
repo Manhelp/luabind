@@ -1008,9 +1008,9 @@ namespace detail
           cast_failed_callback_fun e = get_cast_failed_callback();
           if (e) e(interpreter, type_info);
 
-          assert(0 && "object_cast failed. If you want to handle this error use "
-              "luabind::set_error_callback()");
-          std::terminate();
+          //assert(0 && "object_cast failed. If you want to handle this error use "
+          //    "luabind::set_error_callback()");
+          //std::terminate();
 #endif
           return *(typename boost::remove_reference<T>::type*)0;
       }
@@ -1203,9 +1203,9 @@ namespace adl
               error_callback_fun e = get_error_callback();
               if (e) e(interpreter);
 
-              assert(0 && "the lua function threw an error and exceptions are disabled."
-                  "if you want to handle this error use luabind::set_error_callback()");
-              std::terminate();
+              //assert(0 && "the lua function threw an error and exceptions are disabled."
+              //    "if you want to handle this error use luabind::set_error_callback()");
+              //std::terminate();
 #endif
           }
 

@@ -51,9 +51,9 @@ X* get_pointer(ptr const& p)
     return p.p;
 }
 
-std::shared_ptr<X> make1()
+std::auto_ptr<X> make1()
 {
-    return std::shared_ptr<X>(new X(1));
+    return std::auto_ptr<X>(new X(1));
 }
 
 boost::shared_ptr<X> make2()

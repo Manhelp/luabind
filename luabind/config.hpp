@@ -91,7 +91,7 @@ namespace std
 // multiple lua states and use coroutines, but only
 // one of your real threads may run lua code.
 
-// LUABIND_NO_EXCEPTIONS
+#define LUABIND_NO_EXCEPTIONS
 // this define will disable all usage of try, catch and throw in
 // luabind. This will in many cases disable runtime-errors, such
 // as invalid casts, when calling lua-functions that fails or
